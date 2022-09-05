@@ -1,0 +1,182 @@
+/* Aplica la fuente Roboto (descargada de Google Font) a toda la pagina */
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/*----------------ORDEN DE ARRIBA A ABAJO----------------*/
+/*-------------------------------------------------------*/
+
+/*------------------------HEADER-------------------------*/
+/*-------------------------------------------------------*/
+
+h3 {
+  background-color: #d1891c;
+  font-size: 18px;
+  width: 100%;
+  /* Para que el texto comience donde esta la primera .CARD*/
+  padding: 5px 0px 5px 3%;
+  /* Para que no haya separación entre el h3 y h1 */
+  margin-bottom: 0;
+}
+
+h1 {
+  background-color: rgba(0, 102, 159, 1);
+  color: #fff;
+  font-size: 40px;
+  width: 100%;
+  /* Para que el texto comience donde esta la primera .CARD*/
+  padding: 10px 0px 10px 3%;
+  /* Para que no haya separación entre el h3 y h1 */
+  margin-top: 0;
+}
+
+/* Esto es para la sombra del header (no quedo muy bien) */
+.cabezal {
+  /*Los valores lo busque de internet*/
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+/*-------------------------BODY--------------------------*/
+/*-------------------------------------------------------*/
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* margin: 15px; */
+  /* gap: 10px; */
+  align-items: center;
+}
+
+.card {
+  background: #f3f3f3;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 300px;
+  /* Ponemos position: relative; para cuando manipulemos
+  la imagen de perfil ésta se adapte sea en base a las CARD y no en base al
+  body */
+  position: relative;
+  /*Sombreado para las CARD (los valores lo busque de internet)*/
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.fondo {
+  /* ponemos la imagen de fondo para poder poner  las
+  imagenes de perfil despues*/
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 300px;
+  height: 193px;
+  position: relative top;
+}
+
+.fondo-batman {
+  background-image: url("./img/Baticueva.png");
+}
+
+.fondo-mujerMaravilla {
+  background-image: url("./img/Themyscira.jpg");
+}
+
+.fondo-superman {
+  background-image: url("./img/Fortress2.jpg");
+}
+
+.fondo-harley {
+  background-image: url("./img/LOD-Headquarters1.png");
+}
+
+/* La imagen de perfil va a quedar posicionado en base a su padre .CARD*/
+.card img {
+  top: 23%;
+  position: absolute;
+}
+
+.perfil {
+  /* border-radius: 50% hace la imagen de perfil redonda*/
+  border-radius: 50%;
+  width: 120px;
+  height: 118px;
+  /*Sombreado de la foto de perfil (los valores lo busque de internet)*/
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.imagenPerfil {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  margin-top: 30%;
+  font-size: 30px;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  margin: 22px;
+}
+
+.boton {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+button {
+  color: white;
+  background-color: #00669f;
+  /* border: none; Para eliminar el borde negro que venia por defecto*/
+  border: none;
+  font-size: 15px;
+  padding: 15px 25px;
+}
+
+/*-----------------------FOOTER--------------------------*/
+/*-------------------------------------------------------*/
+
+footer {
+  background-color: #00669f;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer-p {
+  color: white;
+  font-size: 16px;
+  padding: 15px 0px 15px 4%;
+  justify-content: center;
+}
+
+footer img {
+  width: 200px;
+  height: 50px;
+}
+
+/*---------------------RESPONSIVE------------------------*/
+/*-------------------------------------------------------*/
+
+@media (min-width: 768px) {
+  .flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  /* Para cambiar el fondo*/
+  .fondo-batman {
+    background-image: url("./img/batcave2.jpg");
+  }
+
+  /* Para cambiar la foto de perfil de Batman*/
+  .perfil-batman1 {
+    display: block;
+  }
+  .perfil-batman2 {
+    display: none;
+  }
+}
